@@ -8,22 +8,22 @@ import Projects from './pages/Projects';
 
 // Import BrowserRouter, Routes, and Route from react-router-dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 
 export default function App() {
   return (
-    <div>
-      {/* Use BrowserRouter for routing */}
-      <BrowserRouter>
-        <Routes>
-          {/* Define routes */}
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    // Use BrowserRouter for routing
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        {/* Define routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
