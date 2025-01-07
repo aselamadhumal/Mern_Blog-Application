@@ -1,9 +1,29 @@
-//import React from 'react'
+// Import necessary components
+import Home from './pages/Home';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import About from './pages/About';
+import Dashboard from './pages/Dashboard';
+import Projects from './pages/Projects';
+
+// Import BrowserRouter, Routes, and Route from react-router-dom
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default function App() {
   return (
     <div>
-      <h1 className='text-3xl text-red-600'> app</h1>
+      {/* Use BrowserRouter for routing */}
+      <BrowserRouter>
+        <Routes>
+          {/* Define routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
+  );
 }
